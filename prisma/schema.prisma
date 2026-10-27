@@ -1,0 +1,29 @@
+// Schéma de base de données — RL-Station
+// Les modèles seront ajoutés module par module (voir docs/modules.md).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --- comptes ---------------------------------------------------------------
+// Compte, Utilisateur, Role
+
+// --- stations --------------------------------------------------------------
+// Station, Banniere, Pompe, Reservoir, BorneRecharge
+
+// --- flotte ----------------------------------------------------------------
+// Carte, Vehicule, TransactionCarte
+
+// --- facturation -----------------------------------------------------------
+// Facture, LigneFacture, Releve, Paiement
+
+// --- dispatch --------------------------------------------------------------
+// Commande, Livraison, Camion, Chauffeur, SousTraitant
+
+// --- inventaire ------------------------------------------------------------
+// Pige, NiveauReservoir, Prevision
